@@ -13,7 +13,9 @@ app.use(cors());
 
 const port = 5000;
 
-console.log();
+app.get("/", (req, res) => {
+  res.send("!");
+});
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
